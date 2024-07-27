@@ -1,6 +1,6 @@
 # GIM Buddy Server
 
-_0.1.0-alpha.1_
+_0.1-alpha.1_
 
 **GIM Buddy Server** is currently in alpha development stage. As such, you may encounter bugs and incomplete features. Your feedback is invaluable to us as we continue to improve and enhance the plugin.
 
@@ -8,6 +8,22 @@ How to Report Bugs
 If you encounter any issues or have suggestions for improvements, please report them by opening an issue on our GitHub repository. We appreciate your patience and support as we work towards delivering a stable and feature-complete plugin.
 
 We are committed to making constant improvements to GIM Buddy. Stay tuned for regular updates that will bring new features, optimizations, and bug fixes.
+
+## Changelog
+
+_0.1-alpha.2_
+
+- Added skill-services
+- Added skills model
+- Updated varous endpoint schemas
+- Updated .env-sample
+
+_0.1-alpha.1_
+
+- Added firebase integration
+- Added item model
+- Added bank services
+- Added group services
 
 ## Prerequisites
 
