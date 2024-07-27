@@ -1,6 +1,6 @@
 # GIM Buddy Server
 
-_0.1-alpha.1_
+_0.1-alpha.2_
 
 **GIM Buddy Server** is currently in alpha development stage. As such, you may encounter bugs and incomplete features. Your feedback is invaluable to us as we continue to improve and enhance the plugin.
 
