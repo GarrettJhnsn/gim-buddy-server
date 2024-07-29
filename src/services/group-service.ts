@@ -1,58 +1,7 @@
 import axios from "axios";
 import * as cheerio from "cheerio";
 
-const SKILL_NAMES = [
-  "Overall",
-  "Attack",
-  "Defence",
-  "Strength",
-  "Hitpoints",
-  "Ranged",
-  "Prayer",
-  "Magic",
-  "Cooking",
-  "Woodcutting",
-  "Fletching",
-  "Fishing",
-  "Firemaking",
-  "Crafting",
-  "Smithing",
-  "Mining",
-  "Herblore",
-  "Agility",
-  "Thieving",
-  "Slayer",
-  "Farming",
-  "Runecrafting",
-  "Hunter",
-  "Construction",
-];
-
-export async function fetchMemberSkills(
-  memberName: string
-): Promise<Map<string, number>> {
-  const skills = new Map<string, number>();
-
-  try {
-    const response = await axios.get(
-      `https://secure.runescape.com/m=hiscore_oldschool/index_lite.json?player=${memberName}`
-    );
-    const data = response.data;
-
-    data.split("\n").forEach((line: string, index: number) => {
-      if (index < SKILL_NAMES.length) {
-        const [level] = line.split(",");
-        skills.set(SKILL_NAMES[index], parseInt(level, 10));
-      }
-    });
-  } catch (error) {
-    console.error(`Error fetching member skills for ${memberName}:`, error);
-  }
-
-  return skills;
-}
-
-export async function fetchGroupIronmanMembers(
+export async function getGroupIronmanMembers(
   groupName: string
 ): Promise<string[]> {
   const members: string[] = [];
@@ -78,7 +27,7 @@ export async function fetchGroupIronmanMembers(
   return members;
 }
 
-export async function fetchGroupRank(groupName: string): Promise<string> {
+export async function getGroupRank(groupName: string): Promise<string> {
   try {
     const response = await axios.get(
       `https://secure.runescape.com/m=hiscore_oldschool_ironman/group-ironman/?groupName=${groupName}`
